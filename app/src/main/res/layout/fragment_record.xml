@@ -10,35 +10,21 @@
         android:id="@+id/btnRecord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:fab_colorNormal="@color/primary"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/chronometer"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_mic_white_36dp" />
+        android:layout_marginTop="28dp"
+        android:src="@drawable/ic_mic_white_36dp"
+        app:fab_colorNormal="@color/primary" />
 
     <Chronometer
+        android:id="@+id/chronometer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/chronometer"
-        android:textSize="60sp"
-        android:fontFamily="sans-serif-light"
-        android:layout_alignBottom="@+id/recordProgressBar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp" />
-
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:id="@+id/recordProgressBar"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:progressDrawable="@drawable/record_progress_bar"
-        android:background="@drawable/record_progress_bar_background"
-        android:indeterminate="false"
-        android:max="100"
-        android:progress="0"
-        android:layout_marginTop="27dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:fontFamily="sans-serif-light"
+        android:textSize="60sp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -56,16 +42,16 @@
         android:layout_marginStart="10dp"/>
 
     <TextView
+        android:id="@+id/recording_status_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/recording_status_text"
-        android:text="@string/record_prompt"
-        android:textStyle="bold"
-        android:textSize="17sp"
-        android:textColor="#000000"
-        android:fontFamily="sans-serif-condensed"
-        android:layout_above="@+id/btnRecord"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="60dp" />
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/record_prompt"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
