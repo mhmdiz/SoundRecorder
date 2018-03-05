@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.danielkim.voiceness.R;
 import com.danielkim.voiceness.RecordingItem;
+import com.melnykov.fab.FloatingActionButton;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -39,7 +40,7 @@ public class PlaybackFragment extends DialogFragment{
     private MediaPlayer mMediaPlayer = null;
 
     private SeekBar mSeekBar = null;
-    private CircleButton mPlayButton = null;
+    private FloatingActionButton mPlayButton = null;
     private TextView mCurrentProgressTextView = null;
     private TextView mFileNameTextView = null;
     private TextView mFileLengthTextView = null;
@@ -138,7 +139,7 @@ public class PlaybackFragment extends DialogFragment{
             }
         });
 
-        mPlayButton = (CircleButton) view.findViewById(R.id.fab_play);
+        mPlayButton = (FloatingActionButton) view.findViewById(R.id.fab_play);
         mPlayButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
